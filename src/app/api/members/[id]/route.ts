@@ -1,4 +1,3 @@
-// app/api/members/[id]/route.ts
 import { NextResponse } from 'next/server';
 
 const members = [
@@ -7,18 +6,19 @@ const members = [
   { id: 3, name: 'John Doe', role: 'Dozent', bio: 'John Doe ist Dozent für Webentwicklung.' }
 ];
 
-export async function GET(req: Request, { params }: { params: { id: string } }) {
-  const { id } = params;
-  const member = members.find(member => member.id === parseInt(id));
+export async function GET(req: Request, context: { params: { id: string } }) {
+  const { id } = await context.params;
+  
+  if (!id) {
+    return NextResponse.json({ message: 'Keine ID angegeben' }, { status: 400 });
+  }
+
+  const memberId = parseInt(id, 10);
+  const member = members.find((m) => m.id === memberId);
 
   if (!member) {
     return NextResponse.json({ message: 'Member not found' }, { status: 404 });
   }
 
-  try {
-    return NextResponse.json(member);
-  } catch (error) {
-    console.error('Error fetching member:', error);
-    return NextResponse.json({ message: 'Error fetching member' }, { status: 500 });
-  }
+  return NextResponse.json(member);
 }
