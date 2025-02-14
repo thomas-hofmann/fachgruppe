@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Navigation from '@/components/navigation';
 import Headline from '@/components/main-heading';
+import Link from 'next/link';
 
 export default function HomePage() {
   const [members, setMembers] = useState<any[]>([]);
@@ -31,9 +32,6 @@ export default function HomePage() {
 
   return (
     <section>
-      <Headline />
-      <Navigation />
-
       <h2>Mitglieder</h2>
       
       {loading && <p className="text-white">Laden...</p>}
@@ -44,6 +42,10 @@ export default function HomePage() {
           <li key={member.id} className="bg-gray-700 p-4 rounded text-white">
             <h3 className="font-bold">{member.name}</h3>
             <p>{member.role}</p>
+            {/* Link zu Detailseite des Members */}
+            <Link href={`/members/${member.id}`} className="text-blue-500">
+              Details anzeigen
+            </Link>
           </li>
         ))}
       </ul>

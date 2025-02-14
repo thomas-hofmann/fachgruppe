@@ -4,8 +4,6 @@ import Headline from '@/components/main-heading';
 export default function HomePage() {
   return (
     <section>
-      <Headline />
-      <Navigation />
       <h2>Neuigkeiten</h2>
       <article className='w-3/4 text-white'>
         <p>

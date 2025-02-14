@@ -1,14 +1,17 @@
-// app/api/members/route.ts (TypeScript Version)
+// app/api/members/route.ts
 import { NextResponse } from 'next/server';
 
-export async function GET() {
-  // Hier würdest du normalerweise mit einer echten Datenbank oder einem externen Service verbinden.
-  // Beispiel-Daten:
-  const members = [
-    { id: 1, name: 'Max Mustermann', role: 'Professor' },
-    { id: 2, name: 'Anna Beispiel', role: 'Studentin' },
-    { id: 3, name: 'John Doe', role: 'Dozent' }
-  ];
+const members = [
+  { id: 1, name: 'Max Mustermann', role: 'Professor', bio: 'Max Mustermann ist Professor für Medieninformatik.' },
+  { id: 2, name: 'Anna Beispiel', role: 'Studentin', bio: 'Anna Beispiel studiert Medieninformatik.' },
+  { id: 3, name: 'John Doe', role: 'Dozent', bio: 'John Doe ist Dozent für Webentwicklung.' }
+];
 
-  return NextResponse.json(members);
+export async function GET() {
+  try {
+    return NextResponse.json(members);
+  } catch (error) {
+    console.error('Error fetching members:', error);
+    return NextResponse.json({ message: 'Error fetching members' }, { status: 500 });
+  }
 }
