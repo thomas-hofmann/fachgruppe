@@ -1,6 +1,3 @@
-import Navigation from '@/components/navigation';
-import Headline from '@/components/main-heading';
-
 export default function HomePage() {
   return (
     <section>
