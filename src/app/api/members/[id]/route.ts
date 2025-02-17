@@ -6,15 +6,15 @@ const members = [
   { id: 3, name: 'John Doe', role: 'Dozent', bio: 'John Doe ist Dozent für Webentwicklung.' }
 ];
 
-export async function GET(
-  req: Request,
-  { params }: { params: { id: string } }
-) {
-  if (!params.id) {
+// Correct method export pattern for dynamic routes in Next.js 15
+export async function GET(req: Request, { params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;  // Await the params promise
+
+  if (!id) {
     return NextResponse.json({ message: 'Keine ID angegeben' }, { status: 400 });
   }
 
-  const memberId = parseInt(params.id, 10);
+  const memberId = parseInt(id, 10);
   const member = members.find((m) => m.id === memberId);
 
   if (!member) {
