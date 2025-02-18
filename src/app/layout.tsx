@@ -17,9 +17,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-      <div className='container border border-sky-500/50 mx-auto p-6 bg-gray-800 rounded m-4'>
+    <html lang="en" className="dark">
+      <body className="bg-gray-400 dark:bg-black text-gray-900 dark:text-white">
+      <div className="container border border-sky-500/50 mx-auto p-6 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white rounded m-4">
         <Headline />
         <Navigation />
         {children}

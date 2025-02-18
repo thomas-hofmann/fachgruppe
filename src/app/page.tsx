@@ -6,7 +6,7 @@ export default function HomePage() {
     <div>
       <section>
         <h1>Vorstellung</h1>
-        <article className='text-white'>
+        <article>
           <p>
             Die Fachgruppe Multimedia und Grafik des Fachbereichs Informatik entwickelt und koordiniert das Lehrangebot und die Forschungsaktivitäten in den Bereichen Multimedia, aktuelle Webtechnologien und -entwicklungsansätze, mobile Applikationsentwicklung, User-Centered Design und User Experience, Human Computer Interaction, Graphische Datenverarbeitung und Computer Vision.
           </p> 

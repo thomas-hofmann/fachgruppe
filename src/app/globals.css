@@ -2,33 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
   @apply text-2xl;
+  @apply my-4;
 }
 
 h2 {
   @apply text-xl;
-  margin-bottom: 0.5rem;
+  @apply my-4;
 }
 
 h3 {
   @apply text-lg;
+  @apply my-4;
 }
