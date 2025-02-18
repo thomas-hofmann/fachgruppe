@@ -1,4 +1,5 @@
 import Separator from "@/components/separator";
+import Links from "@/components/links";
 
 export default function HomePage() {
   return (
@@ -15,31 +16,7 @@ export default function HomePage() {
         </article>
       </section>
       <Separator />
-      <section>
-        <h2>Wichtige Links</h2>
-        <div className="flex flex-wrap gap-1.5">
-          <a href="https://fbi.h-da.de/fachbereich/fachgruppen/fg-multimedia-grafik" target="_blank" className="inline-block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Fachgruppenseite</h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400">Seite auf der Hauptseite vom Fachbereich: Informatik</p>
-          </a>
-          <a href="https://fbi.h-da.de/studium/labore/multimedia-grafik" target="_blank" className="inline-block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Laborseite</h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400">Seite für das Labor</p>
-          </a>
-          <a href="https://graphics-lab.h-da.io/" target="_blank" className="inline-block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">BigBlueButton Rooms</h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400">Alle Links zu unseren Rooms</p>
-          </a>
-          <a href="https://quiz.hofmann-thomas.de/" target="_blank" className="inline-block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Quiz App</h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400">Eine App mit der man Quizze erstellen kann</p>
-          </a>
-          <a href="https://timer.hofmann-thomas.de/" target="_blank" className="inline-block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Klausurtimer</h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400">Perfekt für Klausuren</p>
-          </a>
-        </div>
-      </section>
+      <Links />
     </div>
   );
 }
