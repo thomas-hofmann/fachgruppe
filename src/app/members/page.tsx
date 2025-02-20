@@ -39,7 +39,7 @@ export default function HomePage() {
 
   return (
     <section>
-      <h2>Mitglieder</h2>
+      <h1>Mitglieder</h1>
       
       {loading && <p className="text-white">Laden...</p>}
       {error && <p className="text-red-500">{error}</p>}

@@ -1,7 +1,7 @@
 export default function Links() {
     return (
         <section>
-            <h2>Wichtige Links</h2>
+            <h2>Nützliche Links</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
                 { href: "https://fbi.h-da.de", title: "Hochschule Darmstadt", desc: "Hauptseite der Hochschule" },
@@ -15,7 +15,13 @@ export default function Links() {
                 { href: "https://repomanager-repo-manager.apps.edu.ocp.users.h-da.cloud/", title: "RepoManager", desc: "Einfache Erzeugung von GitLab Repos" },
                 { href: "https://fbi.h-da.io/internes-und-mitteilungen/", title: "Interne Mitteilungen", desc: "Interne Mitteilungen vom Fachbereich" },
                 { href: "https://h-da.cloud/dashboard/auth/login/?next=/dashboard/project/", title: "Openstack", desc: "Openstack vom Fachbereich" },
+                { href: "https://console-openshift-console.apps.edu.ocp.users.h-da.cloud/add/all-namespaces" , title: "Openshift", desc: "Openshift vom Fachbereich" },
                 { href: "https://fbi.h-da.de/typo3/" , title: "Typo3", desc: "Typo3 vom Fachbereich" },
+                { href: "https://h-da.de/personensuche/", title: "Personensuche", desc: "Personensuche der Hochschule" },
+                { href: "https://obs.fbi.h-da.de/stundenplaene/", title: "Stundenpläne", desc: "Stundenpläne vom Fachbereich" },
+                { href: "https://spm.h-da.de/Login?returnUrl=%2f", title: "Druckerei", desc: "Druckerei der Hochschule" },
+                { href: "https://sd.h-da.de/cgi-bin/customer/index.cgi", title: "Service Desk", desc: "Service Desk der Hochschule" },
+                { href: "https://etherpad.h-da.de/", title: "Etherpad", desc: "Etherpad der Hochschule" },
 
             ].map((link, index) => (
                 <a 
