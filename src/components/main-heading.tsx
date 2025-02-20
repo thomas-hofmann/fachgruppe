@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 
 export default function Headline() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true); // Dark Mode als Standard
 
   const toggleTheme = () => {
     const currentTheme = document.documentElement.classList.toggle('dark');
@@ -14,12 +14,12 @@ export default function Headline() {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      document.documentElement.classList.add('dark');
-      setIsDarkMode(true);
-    } else {
+    if (savedTheme === 'light') {
       document.documentElement.classList.remove('dark');
       setIsDarkMode(false);
+    } else {
+      document.documentElement.classList.add('dark');
+      setIsDarkMode(true);
     }
   }, []);
 
